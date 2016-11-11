@@ -36,11 +36,19 @@
 </head>
   
   <body>
+    
+    <script>
+      
+      function alertandcancel(){
+        document.getElementById('test').innerHTML="File sent!";
+      }
+      
+    </script>
             
       <br>
           <div class="col-lg-6">
             <div class="well bs-component">
-              <form class="form-horizontal" action="upload2.php" method="POST" enctype="multipart/form-data">
+              <form class="form-horizontal" action="javascript:alertandcancel();" method="POST" enctype="multipart/form-data">
                 <fieldset>
                   <legend>Send File To Customer Care Agent</legend>
                   <div class="form-group">
