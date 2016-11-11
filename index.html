@@ -41,20 +41,20 @@
       
       function redirect(){
         
-        document.getElementById('reset').click();
-        document.getElementById('test').innerHTML="File sent!";
+        $("#MainDiv")
+                                  .html('<object width="380" height="380" data="https://lngawspushapp.herokuapp.com/upload2.php"/>');
        
       }
       
     </script>
             
       <br>
-      <div id="MainDiv" style="height:330;width:380">
+      <div id="MainDiv" style="height:380;width:380">
           <div class="col-lg-6">
             <div class="well bs-component">
               <form class="form-horizontal" action="javascript:redirect();" method="POST" enctype="multipart/form-data">
                 <fieldset>
-                  <legend>Send File To Customer Care Agent3</legend>
+                  <legend>Send File To Customer Care Agent4</legend>
                   <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Select File</label>
                     <div class="col-lg-10">
