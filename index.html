@@ -56,7 +56,8 @@
          {
              var frame=$('#SecondFrame').contents();
              frame.find('#Test').click(function(){
-                   document.getElementById('SecondFrame').setAttribute('src', "https://lngawspushapp.herokuapp.com/listenevent.html");
+                   var loc = "https://lngawspushapp.herokuapp.com/listenevent.html";
+                   document.getElementById('SecondFrame').setAttribute('src', loc);
           });
           });
     </script>
