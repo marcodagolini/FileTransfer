@@ -46,7 +46,7 @@
       }
       
     </script> 
-    <div id="FirstFrame" src="https://lngawspushapp.herokuapp.com/index.php" style="width: 380px; height: 253px; border: 0" >
+    <div id="FirstFrame" style="width: 380px; height: 253px; border: 0" >
     </div>
     <br>
     <div id="DivSecondFrame" style="height:127px;width:380px">
@@ -57,8 +57,7 @@
       <script type="text/javascript">
 	
 	function iframeclick() {
-            document.getElementById("SecondFrame").contentWindow.document.body.onclick = function() {
-            document.getElementById("SecondFrame").contentWindow.location.reload();
+            document.getElementById('FirstFrame').innerHTML = 'https://lngawspushapp.herokuapp.com/index.php';
     }
 }
 	   
