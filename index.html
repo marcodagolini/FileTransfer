@@ -52,15 +52,16 @@
     <iframe id="SecondFrame" src="https://lngawspushapp.herokuapp.com/listenevent.html" style="width: 380; height: 127px; border: 0"> >
     </iframe>
     <script>
-         $('#SecondFrame').loads(function()
-         {
-             var frame=$('#SecondFrame').contents();
-             frame.find('#Test').click(function(){
-                   alert("Hello! I am an alert box!!");
-                   var loc = "https://lngawspushapp.herokuapp.com/listenevent.html";
-                   document.getElementById('SecondFrame').setAttribute('src', loc);
-          });
-          });
+      
+      var monitor = setInterval(function(){
+      var elem = document.activeElement;
+          if(elem && elem.tagName == 'SecondFrame'){
+             clearInterval(monitor);
+             alert('clicked!');
+           }
+      }, 100);
+      
+      
     </script>
     
      <br>       
