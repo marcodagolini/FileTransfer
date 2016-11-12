@@ -14,14 +14,22 @@
   
 <body>
     
-	  
+<!--	  
   <iframe id="FirstFrame" src="https://marcodagolini.github.io/FileTransfer/form.html"style="width: 380px; height: 253px; border: 0" >
   </iframe>
   <br>
   <iframe id="SecondFrame" src="https://marcodagolini.github.io/FileTransfer/pusher.html" style="width: 380px; height: 127px; border: 0">
   </iframe>
-    
    
-    
+-->
+   
+<div id="FirstDiv"></div>
+	
+	<script>
+		function(populate(){
+		$("#FirstDiv").html('<object width="380" height="380" data="https://marcodagolini.github.io/FileTransfer/form.html"/>');
+		})
+	</script>
+	
 </body>
 </html>
