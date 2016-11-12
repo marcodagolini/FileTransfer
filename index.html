@@ -1,4 +1,3 @@
-#prova
 <html>
 <head>
 
@@ -52,18 +51,22 @@
     <br>
     <iframe id="SecondFrame" src="https://lngawspushapp.herokuapp.com/listenevent.html" style="width: 380; height: 127px; border: 0"> >
     </iframe>
-    <script>
+    
+      <script type="text/javascript">
+         window.onload=function(){
+            var monitor = setInterval(function(){
+            var elem = document.activeElement;
+            if(elem && elem.tagName == 'IFRAME'){
+		             message.innerHTML = 'Clicked';
+                 clearInterval(monitor);
+                 }
+            }, 100);
+
+          }
+
+</script>
       
-      var monitor = setInterval(function(){
-      var elem = document.activeElement;
-          if(elem && elem.tagName == 'SecondFrame'){
-             clearInterval(monitor);
-             alert('clicked!');
-           }
-      }, 100);
       
-      
-    </script>
     
      <br>       
       <div id="MainDiv" style="height:380;width:380">
