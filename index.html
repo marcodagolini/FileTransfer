@@ -58,6 +58,7 @@
 	
 	var preventClick = false;
         function handleClick(myFunction){
+	     alert("alert");
              if (preventClick)
              return;
              setTimeout(function(){preventClick = true;},200);
