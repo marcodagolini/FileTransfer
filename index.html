@@ -49,23 +49,28 @@
     <iframe id="FirstFrame" src="https://lngawspushapp.herokuapp.com/index.php" style="width: 380; height: 253px; border: 0"> >
     </iframe>
     <br>
-    <div id="DivSecondFrame" style="height:380;width:380">
+    <div id="DivSecondFrame" onclick='handleClick(myfunction)' style="height:380;width:127">
         <iframe id="SecondFrame" src="https://lngawspushapp.herokuapp.com/listenevent.html" style="width: 380; height: 127px; border: 0"> >
         </iframe>
     </div>
     
       <script type="text/javascript">
-         window.onload=function(){
-            var monitor = setInterval(function(){
-            var elem = document.activeElement;
-            if(elem && elem.tagName == 'IFRAME'){
-		 alert('Clicked');
-                 clearInterval(monitor);
-                 }
-            }, 100);
+	
+	var preventClick = false;
+        function handleClick(myFunction){
+             if (preventClick)
+             return;
+             setTimeout(function(){preventClick = true;},200);
+             myFunction.call():
+             }
 
-          }
+ function myFunction(){
 
+  document.getElementById('SecondFrame').contentWindow.location.reload();
+
+ }
+      
+	   
 </script>
       
       
