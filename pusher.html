@@ -32,15 +32,17 @@
       
      //make <p> tag
      var pTag = document.createElement('p');
-     pTag.innerHTML = "or ";
-     //add aTag to H1
+     pTag.innerHTML = " or ";
+     var mydiv = document.getElementById('test');
+     mydiv.appendChild(pTag);
+     //add pTag to H1
      
       
      //make <a> tag
      var aTag = document.createElement('a');
      aTag.setAttribute('href',"");
      aTag.innerHTML = "Send new!";      
-     //add aTag to H1
+     var mydiv = document.getElementById('test');
      mydiv.appendChild(aTag);
      
     });
