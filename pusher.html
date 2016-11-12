@@ -25,6 +25,8 @@
      aTag.setAttribute('href',data.message);
      aTag.setAttribute('target','_blank');
      aTag.innerHTML = "File ";
+     var mydiv = document.getElementById('test');
+     mydiv.appendChild(aTag);
      //add aTag to H1
     
       
@@ -47,7 +49,7 @@
 <body><br>
           <div class="col-lg-6">
             <div class="well bs-component">
-                <legend id="test">Empty Repository <a href="" target="_blank"></a></legend>
+                <legend id="test">Empty Repository</legend>
               <!-- http://s3.amazonaws.com/lnglpdemo/Screen%20Shot%202016-11-11%20at%2010.17.07%20AM.png -->
                   <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label"></label>
