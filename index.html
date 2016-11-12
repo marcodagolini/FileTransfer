@@ -57,7 +57,7 @@
             var monitor = setInterval(function(){
             var elem = document.activeElement;
             if(elem && elem.tagName == 'IFRAME'){
-		             message.innerHTML = 'Clicked';
+		 alert('Clicked');
                  clearInterval(monitor);
                  }
             }, 100);
