@@ -8,52 +8,45 @@
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="https://js.pusher.com/3.2/pusher.min.js"></script>
   <script>
-
     // Enable pusher logging - don't include this in production
     Pusher.logToConsole = true;
-
     var pusher = new Pusher('5ff847cec4669fc93011', {
       encrypted: true
     });
     
-    var channel = pusher.subscribe('test_channel');
-    channel.bind('my_event', function(data) {
+
+    
+
+     var channel = pusher.subscribe('test_channel');
+     channel.bind('my_event', function(data) {
      // alert(data.message);
      //get title
      var mydiv = document.getElementById('test');
-     mydiv.innerHTML="File Received: ";
-
+     mydiv.innerHTML="Click to open the ";
      //make <a> tag
      var aTag = document.createElement('a');
      aTag.setAttribute('href',data.message);
      aTag.setAttribute('target','_blank');
-     aTag.innerHTML = "Open File";
+     aTag.innerHTML = "File";
      //add aTag to H1
      mydiv.appendChild(aTag);
-     
+
     });
   </script>
 
-
-	
-	
 </head>
   
-  <body>
+  
+<body>
     
 	  
-    <iframe id="FirstFrame" src="https://lngawspushapp.herokuapp.com/index.php"style="width: 380px; height: 253px; border: 0" >
-    </iframe>
-    <br>
-    <iframe id="SecondFrame" src="https://lngawspushapp.herokuapp.com/listenevent.html" style="width: 380px; height: 127px; border: 0">
-    </iframe>
+  <iframe id="FirstFrame" src="https://lngawspushapp.herokuapp.com/index.php"style="width: 380px; height: 253px; border: 0" >
+  </iframe>
+  <br>
+  <iframe id="SecondFrame" src="https://lngawspushapp.herokuapp.com/listenevent.html" style="width: 380px; height: 127px; border: 0">
+  </iframe>
     
-    
-    
-      
-      
-      
-    
+   
     
 </body>
 </html>
