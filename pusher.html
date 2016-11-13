@@ -39,9 +39,18 @@
      
       
      //make <a> tag
+     // var aTag = document.createElement('a');
+     // aTag.setAttribute('href',"https://marcodagolini.github.io/FileTransfer/index.html");
+     // aTag.setAttribute('target','_parent');
+     // aTag.innerHTML = "Send new!";      
+     // var mydiv = document.getElementById('test');
+     // mydiv.appendChild(aTag);
+      
+     //make <a> tag
      var aTag = document.createElement('a');
      aTag.setAttribute('href',"https://marcodagolini.github.io/FileTransfer/index.html");
-     aTag.setAttribute('target','_parent');
+     aTag.setAttribute('onclick', "javascript:refresh());
+     // aTag.setAttribute('target','_parent');
      aTag.innerHTML = "Send new!";      
      var mydiv = document.getElementById('test');
      mydiv.appendChild(aTag);
