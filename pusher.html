@@ -41,7 +41,8 @@
      //make <a> tag
      var aTag = document.createElement('a');
      // aTag.setAttribute('href',"https://marcodagolini.github.io/FileTransfer/index.html");
-     aTag.setAttribute('onclick', function() {$("#FirstDiv").html('<object width="380" height="260" data="https://marcodagolini.github.io/FileTransfer/form.html"/>')});    
+     aTag.setAttribute('onclick', function(){ alert("this works!"); } );
+     // {$("#FirstDiv").html('<object width="380" height="260" data="https://marcodagolini.github.io/FileTransfer/form.html"/>')}
      // aTag.setAttribute('target','_self');
      aTag.innerHTML = "Send new!";      
      var mydiv = document.getElementById('test');
